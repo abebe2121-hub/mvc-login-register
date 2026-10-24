@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | MVC Auth</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="auth-card dashboard">
+    <h1>Dashboard</h1>
+    <p class="subtitle">You are successfully logged in!</p>
+
+    <h2>Welcome, <%= name %>!</h2>
+
+    <p>Your account is authenticated.</p>
+
+    <form action="/logout" method="POST">
+      <button type="submit" class="logout-button">
+        Logout
+      </button>
+    </form>
+  </main>
+</body>
+</html>
