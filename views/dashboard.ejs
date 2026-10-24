@@ -4,23 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Dashboard | MVC Auth</title>
+
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-  <main class="auth-card dashboard">
+
+<body class="dashboard-page">
+
+  <!-- Animated background video -->
+  <video
+    class="background-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    aria-hidden="true"
+    
+  >
+    <source src="/videos/coding.mp4" type="video/mp4">
+  </video>
+
+  <!-- Dark overlay above the video -->
+  <div class="video-overlay" aria-hidden="true"></div>
+
+  <!-- Dashboard content -->
+  <main class="auth-card dashboard dashboard-glass">
+
+    <div class="dashboard-icon">{"</>"}</div>
+
+    <p class="dashboard-label">MVC AUTHENTICATION</p>
+
     <h1>Dashboard</h1>
-    <p class="subtitle">You are successfully logged in!</p>
+
+    <p class="subtitle">
+      You are successfully logged in!
+    </p>
 
     <h2>Welcome, <%= name %>!</h2>
 
-    <p>Your account is authenticated.</p>
+    <p class="dashboard-description">
+      Your account is authenticated.
+      You can now access your dashboard.
+    </p>
+
+    <div class="status">
+      <span class="status-dot"></span>
+      <span>System Online</span>
+    </div>
 
     <form action="/logout" method="POST">
       <button type="submit" class="logout-button">
         Logout
       </button>
     </form>
+
   </main>
+
 </body>
 </html>
